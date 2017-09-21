@@ -6,10 +6,18 @@ un environnement processeur et un environnement mémoire.
 # Création d'un processus
 
 Pour créer un processus, sous Windows:
-* Définissez le chemin complet du processus **appName**
+* Définissez le chemin complet du processus dans **appName**
 * Créez le processus avec la méthode **CreateProcess()**
 
 # Code source
+
+Définition du chemin complet du processus:
+```
+GProcess::Instance()->setAppName("C:\\Program Files (x86)\\CMake\\bin\\CMake-Gui.exe");
+GProcess::Instance()->createProcess();
+```
+
+Création du processus:
 ```
 //===============================================
 void GProcess::createProcess() {
