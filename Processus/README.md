@@ -3,14 +3,12 @@
 Un **Processus** est un programme en cours d'exécution auquel est associé  
 un environnement processeur et un environnement mémoire.
 
-La gestion d'un processus nécessite les actions suivantes:
-* Créez le processus
-* Utilisez le processus
-
 # Création d'un processus
 
 Pour créer un processus, sous Windows:
 * Utilisez la méthode **CreateProcess()**
+
+# Code source
 ```
 //===============================================
 void GProcess::createProcess() {
@@ -31,6 +29,10 @@ void GProcess::createProcess() {
 }
 //===============================================
 ```
+
+# Résultats
+![Resultats](https://raw.githubusercontent.com/gkesse/ReadyThread/master/Processus/img/Terminal.png)
+![Resultats](https://raw.githubusercontent.com/gkesse/ReadyThread/master/Processus/img/Processus.png)
 
 # Voir Aussi
 
