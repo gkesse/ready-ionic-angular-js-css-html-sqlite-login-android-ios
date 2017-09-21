@@ -1,6 +1,6 @@
 # Processus
 
-Un **Processus** est un programme en cours d'exécution auquel est associé 
+Un **Processus** est un programme en cours d'exécution auquel est associé  
 un environnement processeur et un environnement mémoire.
 
 La gestion d'un processus nécessite les actions suivantes:
