@@ -6,7 +6,8 @@ un environnement processeur et un environnement mémoire.
 # Création d'un processus
 
 Pour créer un processus, sous Windows:
-* Utilisez la méthode **CreateProcess()**
+* Définissez le chemin complet du processus **appName**
+* Créez le processus avec la méthode **CreateProcess()**
 
 # Code source
 ```
