@@ -1,9 +1,10 @@
 # Processus
 
 Un **Processus** est un programme en cours d'exécution auquel est associé  
-un environnement processeur et un environnement mémoire.  
-Un Processus contient au moins 1 Thread, **le Thread principal**  
-ou plusieurs Threads, **les Threads sécondaires**.
+un environnement processeur et un environnement mémoire.
+
+Un Processus contient au moins 1 Thread, le Thread principal  
+ou plusieurs Threads, les Threads sécondaires.
 
 
 # Création d'un processus
