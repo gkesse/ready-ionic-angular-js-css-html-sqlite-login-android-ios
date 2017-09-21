@@ -6,6 +6,7 @@
 #define UNICODE
 #endif
 //===============================================
+#include "GTypeDef.h"
 #include <iostream>
 #include <string>
 #include <windows.h>
@@ -31,6 +32,7 @@ private:
     string m_appName;
     STARTUPINFO m_startupInfo;
     PROCESS_INFORMATION m_processInformation;
+    ulong m_pid;
 };
 //===============================================
 #endif

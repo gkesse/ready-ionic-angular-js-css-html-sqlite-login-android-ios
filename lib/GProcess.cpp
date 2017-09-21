@@ -27,7 +27,7 @@ void GProcess::createProcess() {
     wstring m_wsTmp = wstring(m_appName.begin(), m_appName.end());
     LPCWSTR m_ws = m_wsTmp.c_str();
 
-    BOOL m_res = CreateProcess(
+    int m_res = CreateProcess(
                 m_ws, NULL, NULL,
                 NULL, FALSE, NULL, NULL, NULL, &m_startupInfo,
                 &m_processInformation);
@@ -38,5 +38,8 @@ void GProcess::createProcess() {
     }
 
     cout << "SUCCESS : The process is created...\n";
+
+    m_pid = m_processInformation.dwProcessId;
+    cout << "SUCCESS : PID : " << m_pid << "\n";
 }
 //===============================================

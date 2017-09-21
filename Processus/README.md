@@ -23,24 +23,13 @@ GProcess::Instance()->createProcess();
 
 Création du processus:
 ```
-//===============================================
-void GProcess::createProcess() {
-    wstring m_wsTmp = wstring(m_appName.begin(), m_appName.end());
-    LPCWSTR m_ws = m_wsTmp.c_str();
+wstring m_wsTmp = wstring(m_appName.begin(), m_appName.end());
+LPCWSTR m_ws = m_wsTmp.c_str();
 
-    BOOL m_res = CreateProcess(
-                m_ws, NULL, NULL,
-                NULL, FALSE, NULL, NULL, NULL, &m_startupInfo,
-                &m_processInformation);
-
-    if(m_res == 0) {
-        cout << "ERROR : The process isn't created...\n";
-        exit(0);
-    }
-
-    cout << "SUCCESS : The process is created...\n";
-}
-//===============================================
+int m_res = CreateProcess(
+            m_ws, NULL, NULL,
+            NULL, FALSE, NULL, NULL, NULL, &m_startupInfo,
+            &m_processInformation);
 ```
 
 # Résultats
