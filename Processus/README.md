@@ -7,6 +7,12 @@ Un Processus contient au moins 1 Thread, le Thread principal
 ou plusieurs Threads, les Threads sécondaires.
 
 # Programme de Test
+
+Dans ce programme de Test:
+* On définit le chemin complet du processus
+* On crée le processus
+* On définit le chemin complet du module
+* On crée le module
 ```
 GProcess::Instance()->setAppName("C:\\Program Files (x86)\\CMake\\bin\\CMake-Gui.exe");
 GProcess::Instance()->createProcess();
@@ -15,6 +21,9 @@ GProcess::Instance()->createModule();
 ```
 
 # Création d'un processus
+
+Pour créer un processus:
+* On utilise la fonction **CreateProcess()**
 ```
 wstring m_wsTmp = wstring(m_appName.begin(), m_appName.end());
 LPCWSTR m_ws = m_wsTmp.c_str();
@@ -26,6 +35,9 @@ int m_res = CreateProcess(
 ```
 
 # Chargement d'un module
+
+Pour charger un module:
+* On utilise la fonction **LoadLibrary()**
 ```
 wstring m_wsTmp = wstring(m_modName.begin(), m_modName.end());
 LPCWSTR m_ws = m_wsTmp.c_str();
@@ -34,6 +46,9 @@ m_hDLL = LoadLibrary(m_ws);
 ```
 
 # Création d'un pointeur de fonction
+
+Pour créer un pointeur de fonction:
+* On utilise le mot clé **typedef**
 ```
 typedef NTSTATUS (NTAPI* GNtQueryInformationProcess)(
         IN HANDLE ProcessHandle,
@@ -44,6 +59,10 @@ typedef NTSTATUS (NTAPI* GNtQueryInformationProcess)(
 ```
 
 # Chargement d'une fonction
+
+Pour charger une fonction:
+* On crée une variable de type le pointeur de fonction
+* On utilise la fonction **GetProcAddress()**
 ```
 GNtQueryInformationProcess NtQueryInformationProcess =
         (GNtQueryInformationProcess)GetProcAddress(
@@ -51,6 +70,9 @@ GNtQueryInformationProcess NtQueryInformationProcess =
 ```
 
 # Exécution d'une fonction
+
+Pour exécuter une fonction:
+* On utilise la variable de type le pointeur de fonction
 ```
 NTSTATUS m_ntStatus = NtQueryInformationProcess(
             m_processInformation.hProcess,
@@ -59,11 +81,11 @@ NTSTATUS m_ntStatus = NtQueryInformationProcess(
 ```
 
 # Destruction d'un gestionnaire de module
+
+Pour détruire un gestionnaire de module:
+* On utilise la fonction **FreeLibrary()**
 ```
-NTSTATUS m_ntStatus = NtQueryInformationProcess(
-            m_processInformation.hProcess,
-            PROCESSINFOCLASS::ProcessBasicInformation,
-            &m_pbi, sizeof(m_pbi), &m_length);
+FreeLibrary(m_hDLL);
 ```
 
 # Résultats
