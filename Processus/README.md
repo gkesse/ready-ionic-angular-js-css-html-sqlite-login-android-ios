@@ -14,7 +14,7 @@ GProcess::Instance()->setModName("C:\\Windows\\System32\\ntdll.dll");
 GProcess::Instance()->createModule();
 ```
 
-Création d'un processus:
+# Création d'un processus
 ```
 wstring m_wsTmp = wstring(m_appName.begin(), m_appName.end());
 LPCWSTR m_ws = m_wsTmp.c_str();
