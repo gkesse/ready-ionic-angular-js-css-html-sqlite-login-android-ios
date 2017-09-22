@@ -25,7 +25,7 @@ int m_res = CreateProcess(
             &m_processInformation);
 ```
 
-# Chargement d'une librairie
+# Chargement d'un module
 ```
 wstring m_wsTmp = wstring(m_modName.begin(), m_modName.end());
 LPCWSTR m_ws = m_wsTmp.c_str();
@@ -48,6 +48,22 @@ typedef NTSTATUS (NTAPI* GNtQueryInformationProcess)(
 GNtQueryInformationProcess NtQueryInformationProcess =
         (GNtQueryInformationProcess)GetProcAddress(
             m_hDLL, "NtQueryInformationProcess");
+```
+
+# Exécution d'une fonction
+```
+NTSTATUS m_ntStatus = NtQueryInformationProcess(
+            m_processInformation.hProcess,
+            PROCESSINFOCLASS::ProcessBasicInformation,
+            &m_pbi, sizeof(m_pbi), &m_length);
+```
+
+# Destruction d'un gestionnaire de module
+```
+NTSTATUS m_ntStatus = NtQueryInformationProcess(
+            m_processInformation.hProcess,
+            PROCESSINFOCLASS::ProcessBasicInformation,
+            &m_pbi, sizeof(m_pbi), &m_length);
 ```
 
 # Résultats
