@@ -9,7 +9,6 @@
 #include "GTypeDef.h"
 #include <iostream>
 #include <string>
-#include <windows.h>
 //===============================================
 using namespace std;
 //===============================================
@@ -23,16 +22,21 @@ public:
     
 public:
     void setAppName(const string& appName);
+    void setModName(const string& modName);
 
 public:
     void createProcess();
+    void createModule();
+    void releaseModule();
 
 private:
     static GProcess* m_instance;
     string m_appName;
+    string m_modName;
     STARTUPINFO m_startupInfo;
     PROCESS_INFORMATION m_processInformation;
     ulong m_pid;
+    HMODULE m_hDLL;
 };
 //===============================================
 #endif
