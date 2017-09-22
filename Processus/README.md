@@ -9,10 +9,10 @@ ou plusieurs Threads, les Threads sécondaires.
 # Programme de Test
 
 Dans ce programme de Test:
-* On définit le chemin complet du processus
-* On crée le processus
-* On définit le chemin complet du module
-* On crée le module
+* On définit le chemin complet d'un processus
+* Pour créer le processus
+* On définit le chemin complet d'un module
+* Pour charger le module
 ```
 GProcess::Instance()->setAppName("C:\\Program Files (x86)\\CMake\\bin\\CMake-Gui.exe");
 GProcess::Instance()->createProcess();
