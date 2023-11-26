@@ -2,4 +2,24 @@
 # gitignore
 #================================================
 
+/**/.angular/
+/**/.vscode/
+/**/android/
+/**/node_modules/
+/**/www/
+/**/.browserslistrc
+/**/.editorconfig
+/**/.eslintrc.json
+/**/.gitignore
+/**/angular.json
+/**/capacitor.config.ts
+/**/ionic.config.json
+/**/karma.conf.js
+/**/package.json
+/**/package-lock.json
+/**/tsconfig.app.json
+/**/tsconfig.json
+/**/tsconfig.spec.json
+/**/~*
+
 #================================================
