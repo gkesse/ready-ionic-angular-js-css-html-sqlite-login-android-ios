@@ -10,7 +10,6 @@
 /**/.browserslistrc
 /**/.editorconfig
 /**/.eslintrc.json
-/**/.gitignore
 /**/angular.json
 /**/capacitor.config.ts
 /**/ionic.config.json
