@@ -1,0 +1,45 @@
+<!-- ============================================ -->
+<ion-header  class="ion-no-border">
+  <ion-toolbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="ion-no-margin">
+    <ion-img src="assets/img/header.png"></ion-img>
+
+    <ion-card-header>
+      <ion-card-title>Bienvenue</ion-card-title>
+
+      <ion-card-subtitle class="ion-text-lowercase">
+        Cette application est une plateforme de médias sociaux pour
+        artistes et tout est question de visuels      </ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <div class="signin-btns">
+        <ion-button mode="ios" size="large" fill="solid" shape="round" class="loginbtn" (click)="onLogin()">Se connecter</ion-button>
+        <ion-button mode="ios" size="large" fill="outline" shape="round" color="primary" (click)="onRegister()">S'inscrire</ion-button>    
+      </div>
+
+      <div class="text-tag">
+        <span>Ou via les réseaux sociaux</span>
+      </div>
+
+      <div class="social-btns">
+        <ion-button fill="clear"  class="facebookbtn ion-no-padding" (click)="onFacebook()">
+          <ion-img src="assets/img/facebook.png"/>
+        </ion-button>
+
+        <ion-button fill="clear"  class="googlebtn ion-no-padding" (click)="onGoogle()">
+          <ion-img src="assets/img/google.png"/>
+        </ion-button>
+
+        <ion-button fill="clear"  class="applebtn ion-no-padding" (click)="onApple()">
+          <ion-img src="assets/img/apple.png"/>
+        </ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+<!-- ============================================ -->
